@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+body {
+  background-image: url("/src/assets/stars.jpg");
+  /* background-repeat: repeat-y; */
+  /* width: 100%; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.home > div {
+  margin: 2em;
+}
+#earth {
+  background-image: url("/src/assets/earth_map.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: 300px;
+  width: 200px;
+  height: 200px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  /* object-fit: cover; */
+  border-radius: 50%;
+  background-size: 380px;
+  animation: rotateEarth 10s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
+}
+#venus {
+  background-image: url("/src/assets/venus_map.jpg");
+  width: 200px;
+  height: 200px;
+  background-size: 300px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  animation: rotateVenus 10s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+#mars {
+  background-image: url("/src/assets/mars_map.jpg");
+  width: 150px;
+  height: 150px;
+  background-size: 280px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  animation: rotateMars 6s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
+}
+#jupiter {
+  background-image: url("/src/assets/jupiter_map.png");
+  width: 500px;
+  height: 500px;
+  background-size: 1150px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  animation: rotateJupiter 15s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#saturn {
+  background-image: url("/src/assets/saturn_map.png");
+  width: 400px;
+  height: 400px;
+  background-size: 800px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  animation: rotateSaturn 15s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
+}
+#uranus {
+  background-image: url("/src/assets/uranus_map.jpg");
+  width: 270px;
+  height: 270px;
+  background-size: 800px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  animation: rotateUranus 15s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
+}
+
+@keyframes rotateEarth {
+  0% {
+    background-position: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: 380px;
+  }
+}
+@keyframes rotateVenus {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -300px;
+  }
+}
+@keyframes rotateMars {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 280px;
+  }
+}
+@keyframes rotateJupiter {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 1150px;
+  }
+}
+@keyframes rotateSaturn {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+@keyframes rotateUranus {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
   }
 }
