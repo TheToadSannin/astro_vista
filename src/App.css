@@ -5,23 +5,39 @@ body {
 }
 .home {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  width: fit-content;
+  gap: 500px;
 }
 .home > div {
-  margin: 2em;
+  /* margin: 2em; */
 }
 #earth {
-  background-image: url("/src/assets/earth_map.jpg");
+  background-image: url("/src/assets/earth_map_cloud.jpg");
   /* background-repeat: no-repeat; */
   background-size: 300px;
   width: 200px;
   height: 200px;
-  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+  box-shadow: inset -20px -15px 20px 3px rgba(0, 0, 0, 0.9),
     inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   /* object-fit: cover; */
   border-radius: 50%;
   background-size: 380px;
+  animation: rotateEarth 10s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
+  rotate: -23.44deg;
+}
+#mercury {
+  background-image: url("/src/assets/mercury_map.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: 300px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background-size: 180px;
   animation: rotateEarth 10s infinite;
   animation-timing-function: linear;
   background-position: 300px;
@@ -31,12 +47,13 @@ body {
   width: 200px;
   height: 200px;
   background-size: 300px;
-  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
-    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  box-shadow: inset -20px -15px 20px 3px rgba(0, 0, 0, 0.9),
+  inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   animation: rotateVenus 10s infinite;
   animation-timing-function: linear;
   background-position: 300px;
+  rotate: 3deg;
 }
 
 #mars {
@@ -44,24 +61,26 @@ body {
   width: 150px;
   height: 150px;
   background-size: 280px;
-  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+  box-shadow: inset -30px -20px 40px 3px rgba(0, 0, 0, 0.9),
     inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   animation: rotateMars 6s infinite;
   animation-timing-function: linear;
   background-position: 300px;
+  rotate: -25deg;
 }
 #jupiter {
   background-image: url("/src/assets/jupiter_map.png");
   width: 500px;
   height: 500px;
   background-size: 1150px;
-  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+  box-shadow: inset -50px 0 40px 3px rgba(0, 0, 0, 0.9),
     inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   animation: rotateJupiter 15s infinite;
   animation-timing-function: linear;
   background-position: 300px;
+  rotate: -3deg;
 }
 
 #saturn {
@@ -70,12 +89,13 @@ body {
   width: 400px;
   height: 400px;
   background-size: 800px;
-  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+  box-shadow: inset -70px -20px 40px 3px rgba(0, 0, 0, 0.9),
     inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   animation: rotateSaturn 15s infinite;
   animation-timing-function: linear;
   background-position: 300px;
+  rotate: -26deg;
 }
 
 #saturn .rings {
@@ -96,7 +116,7 @@ body {
   width: 270px;
   height: 270px;
   background-size: 800px;
-  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+  box-shadow: inset -70px 0 40px 3px rgba(0, 0, 0, 0.9),
     inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   animation: rotateUranus 15s infinite;
@@ -108,12 +128,27 @@ body {
   width: 270px;
   height: 270px;
   background-size: 800px;
-  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+  box-shadow: inset -70px -20px 40px 3px rgba(0, 0, 0, 0.9),
     inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   animation: rotateNeptune 15s infinite;
   animation-timing-function: linear;
   background-position: 300px;
+  rotate: -28deg;
+}
+
+
+#sun{
+
+  background-image: url("/src/assets/sun_map.jpg");
+  width: 1200px;
+  height: 1200px;
+  background-size: 2200px;
+  box-shadow: inset 0 0 50px rgba(255, 230, 0, 0.684), 0 0 50px rgba(255, 196, 0, 0.684);
+  border-radius: 50%;
+  animation: rotateSun 120s infinite;
+  animation-timing-function: linear;
+  background-position: 2200px;
 }
 
 @keyframes rotateEarth {
@@ -170,5 +205,13 @@ body {
   }
   100% {
     background-position: 800px;
+  }
+}
+@keyframes rotateSun {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 2200px;
   }
 }

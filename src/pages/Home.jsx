@@ -4,6 +4,8 @@ import earth from "../assets/earth_map.jpg";
 const Home = () => {
   return (
     <main className="home">
+      <div id="sun"></div>
+      <div id="mercury"></div>
       <div id="venus"></div>
       <div id="earth"></div>
       <div id="mars"></div>
