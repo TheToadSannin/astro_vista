@@ -66,6 +66,7 @@ body {
 
 #saturn {
   background-image: url("/src/assets/saturn_map.png");
+  position: relative;
   width: 400px;
   height: 400px;
   background-size: 800px;
@@ -76,6 +77,20 @@ body {
   animation-timing-function: linear;
   background-position: 300px;
 }
+
+#saturn .rings {
+  background-image: url("/src/assets/saturn_ring.png");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  left: -52%;
+  rotate: 10deg;
+  /* right: 0%; */
+  top: 10%;
+  position: absolute;
+  width: 800px;
+  height: 100%;
+}
+
 #uranus {
   background-image: url("/src/assets/uranus_map.jpg");
   width: 270px;
@@ -85,6 +100,18 @@ body {
     inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
   border-radius: 50%;
   animation: rotateUranus 15s infinite;
+  animation-timing-function: linear;
+  background-position: 300px;
+}
+#neptune {
+  background-image: url("/src/assets/neptune_map.jpg");
+  width: 270px;
+  height: 270px;
+  background-size: 800px;
+  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9),
+    inset -3px 0 5px 2px rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  animation: rotateNeptune 15s infinite;
   animation-timing-function: linear;
   background-position: 300px;
 }
@@ -130,6 +157,14 @@ body {
   }
 }
 @keyframes rotateUranus {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+@keyframes rotateNeptune {
   0% {
     background-position: 0px;
   }
